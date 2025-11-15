@@ -54,7 +54,7 @@ export default function Home() {
               <span className="text-purple-400 text-sm font-medium">ITN</span>
               <span className="text-white/80 text-sm">재활 전문 피트니스</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
               통증을 넘어,<br />지속 가능한 건강으로
             </h1>
             <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
