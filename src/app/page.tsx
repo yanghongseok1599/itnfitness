@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import VideoPlayer from "@/components/video-player";
+import AIChatbot from "@/components/ai-chatbot";
 import { useState } from "react";
 import { submitToGoogleSheets } from "@/lib/googleSheets";
 
@@ -438,6 +439,9 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* AI Chatbot */}
+      <AIChatbot />
     </div>
   );
 }
