@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app'),
+  metadataBase: new URL('https://landing-page-eight-kappa-56.vercel.app'),
 
   // 기본 메타데이터
   title: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   // 저자 정보
   authors: [
     { name: "ITN Fitness" },
-    { name: "ITN 피트니스", url: "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app" }
+    { name: "ITN 피트니스", url: "https://landing-page-eight-kappa-56.vercel.app" }
   ],
 
   // 제작자
@@ -49,13 +49,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app",
+    url: "https://landing-page-eight-kappa-56.vercel.app",
     siteName: "ITN 피트니스",
     title: "ITN 피트니스 - 통증 없이 지속 가능한 건강",
     description: "동해 지역 NO.1 재활 전문 피트니스. 의학 석사 보유 전문가가 허리·목·어깨·무릎 통증을 근본적으로 개선합니다.",
     images: [
       {
-        url: "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app/og-image.png",
+        url: "https://landing-page-eight-kappa-56.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "ITN 피트니스 - 재활 전문 피트니스 센터",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ITN 피트니스 - 통증 없이 지속 가능한 건강",
     description: "동해 지역 NO.1 재활 전문 피트니스. 의학 석사 보유 전문가가 허리·목·어깨·무릎 통증을 근본적으로 개선합니다.",
-    images: ["https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app/og-image.png"],
+    images: ["https://landing-page-eight-kappa-56.vercel.app/og-image.png"],
     creator: "@ITNFitness",
   },
 
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
 
   // 추가 메타데이터
   alternates: {
-    canonical: "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app",
+    canonical: "https://landing-page-eight-kappa-56.vercel.app",
   },
 
   // 앱 링크 (모바일 최적화)
@@ -124,13 +124,13 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
-    "@id": "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app",
+    "@id": "https://landing-page-eight-kappa-56.vercel.app",
     "name": "ITN 피트니스",
     "alternateName": "ITN FITNESS",
     "description": "동해 지역 재활 전문 피트니스 센터. 의학 석사 보유 전문가의 맞춤형 교정운동으로 통증을 근본적으로 개선합니다.",
-    "url": "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app",
-    "logo": "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app/og-image.png",
-    "image": "https://landing-page-86qqimkxs-milestones-projects-d52c4dda.vercel.app/og-image.png",
+    "url": "https://landing-page-eight-kappa-56.vercel.app",
+    "logo": "https://landing-page-eight-kappa-56.vercel.app/og-image.png",
+    "image": "https://landing-page-eight-kappa-56.vercel.app/og-image.png",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
