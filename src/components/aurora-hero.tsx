@@ -10,7 +10,6 @@ import {
   motion,
   animate,
 } from "framer-motion";
-import VideoPlayer from "@/components/video-player";
 
 const COLORS_TOP = ["#10b981", "#059669", "#047857", "#065f46"];
 
@@ -83,11 +82,6 @@ export const AuroraHero = () => {
               <FiArrowRight className="transition-transform group-hover:-rotate-45" />
             </motion.a>
           </div>
-        </div>
-
-        {/* 비디오 플레이어 */}
-        <div className="max-w-3xl mx-auto w-full">
-          <VideoPlayer src="/video.mp4" autoPlay />
         </div>
       </div>
 
