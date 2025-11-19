@@ -13,17 +13,17 @@ export interface SubmitResponse {
 }
 
 /**
- * 구글 시트에 폼 데이터를 제출합니다
+ * 구글 시트에 폼 데이터를 제출합니다 (랜딩페이지 상담신청 전용)
  * @param formData 제출할 폼 데이터
  * @returns 제출 결과
  */
 export async function submitToGoogleSheets(
   formData: FormData
 ): Promise<SubmitResponse> {
-  const scriptUrl = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+  const scriptUrl = process.env.NEXT_PUBLIC_LANDING_FORM_SCRIPT_URL;
 
-  if (!scriptUrl || scriptUrl === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-    console.error('Google Apps Script URL이 설정되지 않았습니다.');
+  if (!scriptUrl || scriptUrl === 'YOUR_LANDING_FORM_SCRIPT_URL_HERE') {
+    console.error('랜딩페이지 Google Apps Script URL이 설정되지 않았습니다.');
     // 개발 환경에서는 콘솔에만 출력
     console.log('제출된 데이터:', formData);
     return {
