@@ -506,7 +506,7 @@ export default function Home() {
               </div>
             </div>
             <p className="text-emerald-300 text-lg font-semibold mb-2">
-              ⏰ 이번 주 신청자 한정 - 첫 달 20% 할인
+              ⏰ 이번 주 신청자 한정 PT등록 시 헬스 1개월 무료증정 !
             </p>
             <p className="text-white text-sm mb-4">오늘 밤 10시 마감</p>
             <CountdownTimer />
@@ -600,7 +600,7 @@ export default function Home() {
               <p className="mt-4 text-gray-300 leading-relaxed pl-8">
                 프로그램별, 기간별로 다양한 옵션이 있어 상담을 통해 맞춤 견적을 제공해드립니다.
                 첫 방문 시 <strong className="text-emerald-400">무료 체성분 검사 및 체형 평가</strong>를 받으실 수 있으며,
-                이번 주 신청자 한정 <strong className="text-emerald-400">첫 달 20% 할인</strong> 혜택을 드립니다.
+                이번 주 신청자 한정 <strong className="text-emerald-400">PT등록 시 헬스 1개월 무료증정</strong> 혜택을 드립니다.
               </p>
             </details>
           </div>
