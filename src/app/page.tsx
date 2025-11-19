@@ -5,10 +5,10 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import VideoPlayer from "@/components/video-player";
 import AIChatbot from "@/components/ai-chatbot";
 import CountdownTimer from "@/components/countdown-timer";
 import NaverMap from "@/components/naver-map";
+import { AuroraHero } from "@/components/aurora-hero";
 import { useState } from "react";
 import { submitToGoogleSheets } from "@/lib/googleSheets";
 
@@ -54,48 +54,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-gradient-to-b from-[#0a1f1a] via-[#0f2820] to-gray-900">
-        {/* 상단 네비게이션 */}
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <span className="text-white text-2xl font-bold">ITN</span>
-              <span className="text-emerald-400 text-2xl font-bold">FITNESS</span>
-            </div>
-            <div className="flex gap-8 text-white">
-              <a href="#services" className="hover:text-emerald-400 transition">서비스</a>
-              <a href="#benefits" className="hover:text-emerald-400 transition">혜택</a>
-              <a href="#contact-form" className="hover:text-emerald-400 transition">문의하기</a>
-            </div>
-          </div>
-        </nav>
-
-        <div className="max-w-6xl mx-auto w-full space-y-8 mt-20">
-          {/* 타이틀 및 설명 */}
-          <div className="text-center space-y-6 mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6" style={{ lineHeight: '1.3' }}>
-              당신의 건강한 변화,<br />
-              <span className="text-emerald-400">ITN 피트니스</span>에서 시작하세요
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              전문 트레이너와 함께하는 맞춤형 피트니스 프로그램
-            </p>
-
-            {/* CTA 버튼 */}
-            <div className="mt-8">
-              <a
-                href="#contact-form"
-                className="inline-block px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 bg-emerald-500 hover:bg-emerald-600 text-white shadow-lg shadow-emerald-500/50"
-              >
-                무료 상담 신청하기
-              </a>
-            </div>
-          </div>
-
-          {/* 비디오 플레이어 */}
-          <VideoPlayer src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" />
-        </div>
-      </section>
+      <AuroraHero />
 
       {/* Story Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
