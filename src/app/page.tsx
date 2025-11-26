@@ -59,33 +59,33 @@ export default function Home() {
       {/* Story Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             왜 ITN 피트니스인가?
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-emerald-600 transition-colors">
-              <div className="text-5xl mb-4">😣</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">문제</h3>
-              <p className="text-gray-300">
+          <div className="grid grid-cols-3 gap-2 md:gap-8 mb-20">
+            <Card className="bg-gray-800/50 border-gray-700 p-2 md:p-8 hover:border-emerald-600 transition-colors">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center">😣</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">문제</h3>
+              <p className="text-gray-300 text-[10px] md:text-base leading-tight md:leading-normal">
                 허리, 목, 어깨, 무릎 통증으로 운동을 시작하기 두렵고,
                 기존 헬스장에서 통증이 더 악화된 경험이 있으신가요?
               </p>
             </Card>
 
-            <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-emerald-600 transition-colors">
-              <div className="text-5xl mb-4">💡</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">솔루션</h3>
-              <p className="text-gray-300">
+            <Card className="bg-gray-800/50 border-gray-700 p-2 md:p-8 hover:border-emerald-600 transition-colors">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center">💡</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">솔루션</h3>
+              <p className="text-gray-300 text-[10px] md:text-base leading-tight md:leading-normal">
                 ITN은 재활 전문가의 정확한 평가를 통해 개인 맞춤형
                 교정운동 프로그램을 제공합니다.
               </p>
             </Card>
 
-            <Card className="bg-gray-800/50 border-gray-700 p-8 hover:border-emerald-600 transition-colors">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">결과</h3>
-              <p className="text-gray-300">
+            <Card className="bg-gray-800/50 border-gray-700 p-2 md:p-8 hover:border-emerald-600 transition-colors">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center">🎯</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">결과</h3>
+              <p className="text-gray-300 text-[10px] md:text-base leading-tight md:leading-normal">
                 통증 감소는 물론, 재발 방지와 지속 가능한 건강한
                 움직임을 되찾게 됩니다.
               </p>
@@ -104,9 +104,9 @@ export default function Home() {
           </div>
 
           {/* 전문성 강조 */}
-          <div className="bg-gradient-to-r from-emerald-900/30 to-emerald-800/30 rounded-lg p-10 border border-emerald-700">
-            <h3 className="text-3xl font-bold mb-8 text-left">운영자 전문성</h3>
-            <div className="grid md:grid-cols-2 gap-6 text-lg">
+          <div className="bg-gradient-to-r from-emerald-900/30 to-emerald-800/30 rounded-lg p-4 md:p-10 border border-emerald-700">
+            <h3 className="text-xl md:text-3xl font-bold mb-4 md:mb-8 text-left">운영자 전문성</h3>
+            <div className="grid md:grid-cols-2 gap-3 md:gap-6 text-sm md:text-lg">
               <div className="flex items-start">
                 <span className="text-emerald-400 mr-3">✓</span>
                 <span>국회의원상 수상 재활트레이너</span>
@@ -139,103 +139,184 @@ export default function Home() {
       {/* Social Proof Section */}
       <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             회원들의 변화
           </h2>
 
-          {/* 이미지 섹션 */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/1.jpg"
-                alt="ITN 피트니스 후기 1"
-                className="w-full h-auto object-cover"
-              />
+          {/* 후기 섹션 - 모바일: 사진+후기 짝지어서, 데스크탑: 사진 3장 + 후기 3장 */}
+          {/* 모바일 버전 - 사진과 후기 짝지어서 */}
+          <div className="md:hidden space-y-6 mb-16">
+            {/* 첫 번째 후기 */}
+            <div className="space-y-3">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/1.jpg"
+                  alt="ITN 피트니스 후기 1"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <Card className="bg-gray-800/50 border-gray-700 p-4">
+                <div className="flex items-center mb-2">
+                  <div className="flex text-yellow-400 text-sm">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-2 text-sm">
+                  "5년 동안 고생했던 허리 통증이 3개월 만에 거의 사라졌어요.
+                  이제는 아침에 일어나는 것도 두렵지 않습니다!"
+                </p>
+                <p className="text-emerald-400 font-semibold text-sm">- 김○○ (48세, 직장인)</p>
+              </Card>
             </div>
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/2.jpg"
-                alt="ITN 피트니스 후기 2"
-                className="w-full h-auto object-cover"
-              />
+
+            {/* 두 번째 후기 */}
+            <div className="space-y-3">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/2.jpg"
+                  alt="ITN 피트니스 후기 2"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <Card className="bg-gray-800/50 border-gray-700 p-4">
+                <div className="flex items-center mb-2">
+                  <div className="flex text-yellow-400 text-sm">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-2 text-sm">
+                  "목과 어깨 통증으로 약만 먹다가 ITN을 만났습니다.
+                  정확한 진단과 체계적인 운동으로 완전히 회복했어요."
+                </p>
+                <p className="text-emerald-400 font-semibold text-sm">- 이○○ (35세, 전업주부)</p>
+              </Card>
             </div>
-            <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/3.png"
-                alt="ITN 피트니스 후기 3"
-                className="w-full h-auto object-cover"
-              />
+
+            {/* 세 번째 후기 */}
+            <div className="space-y-3">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/3.png"
+                  alt="ITN 피트니스 후기 3"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <Card className="bg-gray-800/50 border-gray-700 p-4">
+                <div className="flex items-center mb-2">
+                  <div className="flex text-yellow-400 text-sm">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-2 text-sm">
+                  "무릎 통증 때문에 운동을 포기했었는데,
+                  이곳에서 올바른 방법을 배워 지금은 건강하게 운동하고 있습니다."
+                </p>
+                <p className="text-emerald-400 font-semibold text-sm">- 박○○ (52세, 직장인)</p>
+              </Card>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="bg-gray-800/50 border-gray-700 p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
-                </div>
+          {/* 데스크탑 버전 - 기존 레이아웃 유지 */}
+          <div className="hidden md:block">
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/1.jpg"
+                  alt="ITN 피트니스 후기 1"
+                  className="w-full h-auto object-cover"
+                />
               </div>
-              <p className="text-gray-300 mb-4">
-                "5년 동안 고생했던 허리 통증이 3개월 만에 거의 사라졌어요.
-                이제는 아침에 일어나는 것도 두렵지 않습니다!"
-              </p>
-              <p className="text-emerald-400 font-semibold">- 김○○ (48세, 직장인)</p>
-            </Card>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/2.jpg"
+                  alt="ITN 피트니스 후기 2"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/3.png"
+                  alt="ITN 피트니스 후기 3"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
 
-            <Card className="bg-gray-800/50 border-gray-700 p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <Card className="bg-gray-800/50 border-gray-700 p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                "목과 어깨 통증으로 약만 먹다가 ITN을 만났습니다.
-                정확한 진단과 체계적인 운동으로 완전히 회복했어요."
-              </p>
-              <p className="text-emerald-400 font-semibold">- 이○○ (35세, 전업주부)</p>
-            </Card>
+                <p className="text-gray-300 mb-4">
+                  "5년 동안 고생했던 허리 통증이 3개월 만에 거의 사라졌어요.
+                  이제는 아침에 일어나는 것도 두렵지 않습니다!"
+                </p>
+                <p className="text-emerald-400 font-semibold">- 김○○ (48세, 직장인)</p>
+              </Card>
 
-            <Card className="bg-gray-800/50 border-gray-700 p-6">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i}>★</span>
-                  ))}
+              <Card className="bg-gray-800/50 border-gray-700 p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="text-gray-300 mb-4">
-                "무릎 통증 때문에 운동을 포기했었는데,
-                이곳에서 올바른 방법을 배워 지금은 건강하게 운동하고 있습니다."
-              </p>
-              <p className="text-emerald-400 font-semibold">- 박○○ (52세, 직장인)</p>
-            </Card>
+                <p className="text-gray-300 mb-4">
+                  "목과 어깨 통증으로 약만 먹다가 ITN을 만났습니다.
+                  정확한 진단과 체계적인 운동으로 완전히 회복했어요."
+                </p>
+                <p className="text-emerald-400 font-semibold">- 이○○ (35세, 전업주부)</p>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-gray-700 p-6">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  "무릎 통증 때문에 운동을 포기했었는데,
+                  이곳에서 올바른 방법을 배워 지금은 건강하게 운동하고 있습니다."
+                </p>
+                <p className="text-emerald-400 font-semibold">- 박○○ (52세, 직장인)</p>
+              </Card>
+            </div>
           </div>
 
           {/* 성과 지표 */}
-          <div className="grid md:grid-cols-5 gap-6 text-center">
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">1200명+</div>
-              <div className="text-sm text-gray-300">통증 개선 사례</div>
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-6 text-center">
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-lg md:text-3xl font-bold text-emerald-400 mb-1 md:mb-2">1200명+</div>
+              <div className="text-xs md:text-sm text-gray-300">통증 개선 사례</div>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">95%</div>
-              <div className="text-sm text-gray-300">회원 만족도</div>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-lg md:text-3xl font-bold text-emerald-400 mb-1 md:mb-2">95%</div>
+              <div className="text-xs md:text-sm text-gray-300">회원 만족도</div>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">52개</div>
-              <div className="text-sm text-gray-300">기관 교육 실적</div>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-lg md:text-3xl font-bold text-emerald-400 mb-1 md:mb-2">52개</div>
+              <div className="text-xs md:text-sm text-gray-300">기관 교육 실적</div>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">10년+</div>
-              <div className="text-sm text-gray-300">전문 경력</div>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-lg md:text-3xl font-bold text-emerald-400 mb-1 md:mb-2">10년+</div>
+              <div className="text-xs md:text-sm text-gray-300">전문 경력</div>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">7200명+</div>
-              <div className="text-sm text-gray-300">총 누적회원</div>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-lg md:text-3xl font-bold text-emerald-400 mb-1 md:mb-2">7200명+</div>
+              <div className="text-xs md:text-sm text-gray-300">총 누적회원</div>
             </div>
           </div>
         </div>
@@ -244,7 +325,7 @@ export default function Home() {
       {/* Before/After Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             실제 회원님들의 변화
           </h2>
           <p className="text-center text-gray-400 mb-16 text-lg">
@@ -275,7 +356,7 @@ export default function Home() {
       {/* 수상 및 이력 Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             수상 및 이력
           </h2>
           <p className="text-center text-gray-400 mb-16 text-lg">
@@ -290,21 +371,21 @@ export default function Home() {
             />
           </div>
 
-          <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-4xl mb-3">🏆</div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">정부 인증</h3>
-              <p className="text-gray-300 text-sm">국회의원상 수상 재활트레이너</p>
+          <div className="mt-8 md:mt-12 grid grid-cols-3 gap-2 md:gap-6 text-center">
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-2xl md:text-4xl mb-1 md:mb-3">🏆</div>
+              <h3 className="text-sm md:text-xl font-bold text-emerald-400 mb-1 md:mb-2">정부 인증</h3>
+              <p className="text-gray-300 text-xs md:text-sm">국회의원상 수상 재활트레이너</p>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-4xl mb-3">🎓</div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">학위</h3>
-              <p className="text-gray-300 text-sm">자세체형교정 전공 통합 의학 석사</p>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-2xl md:text-4xl mb-1 md:mb-3">🎓</div>
+              <h3 className="text-sm md:text-xl font-bold text-emerald-400 mb-1 md:mb-2">학위</h3>
+              <p className="text-gray-300 text-xs md:text-sm">자세체형교정 전공 통합 의학 석사</p>
             </div>
-            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-6 border border-emerald-700">
-              <div className="text-4xl mb-3">📚</div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-2">전문서적</h3>
-              <p className="text-gray-300 text-sm">재활 및 스포츠 전문서적 21권 집필</p>
+            <div className="bg-gradient-to-b from-emerald-900/30 to-emerald-800/30 rounded-lg p-3 md:p-6 border border-emerald-700">
+              <div className="text-2xl md:text-4xl mb-1 md:mb-3">📚</div>
+              <h3 className="text-sm md:text-xl font-bold text-emerald-400 mb-1 md:mb-2">전문서적</h3>
+              <p className="text-gray-300 text-xs md:text-sm">재활 및 스포츠 전문서적 21권 집필</p>
             </div>
           </div>
         </div>
@@ -313,57 +394,57 @@ export default function Home() {
       {/* Trust Elements Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             ITN만의 차별화된 시스템
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-10">
+            <div className="space-y-4 md:space-y-6">
               <div className="flex items-start">
-                <div className="bg-emerald-600 rounded-full p-3 mr-4 flex-shrink-0">
-                  <span className="text-2xl">📋</span>
+                <div className="bg-emerald-600 rounded-full p-2 md:p-3 mr-3 md:mr-4 flex-shrink-0">
+                  <span className="text-lg md:text-2xl">📋</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">정밀 평가 시스템</h3>
-                  <p className="text-gray-300">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">정밀 평가 시스템</h3>
+                  <p className="text-gray-300 text-sm md:text-base">
                     의학적 근거 기반의 체계적인 평가로 통증의 근본 원인을 파악합니다.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="bg-emerald-600 rounded-full p-3 mr-4 flex-shrink-0">
-                  <span className="text-2xl">🎯</span>
+                <div className="bg-emerald-600 rounded-full p-2 md:p-3 mr-3 md:mr-4 flex-shrink-0">
+                  <span className="text-lg md:text-2xl">🎯</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">맞춤형 교정 운동</h3>
-                  <p className="text-gray-300">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">맞춤형 교정 운동</h3>
+                  <p className="text-gray-300 text-sm md:text-base">
                     개인의 상태에 맞춘 1:1 맞춤 프로그램으로 안전하게 진행합니다.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="flex items-start">
-                <div className="bg-emerald-600 rounded-full p-3 mr-4 flex-shrink-0">
-                  <span className="text-2xl">🔄</span>
+                <div className="bg-emerald-600 rounded-full p-2 md:p-3 mr-3 md:mr-4 flex-shrink-0">
+                  <span className="text-lg md:text-2xl">🔄</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">재발 방지 관리</h3>
-                  <p className="text-gray-300">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">재발 방지 관리</h3>
+                  <p className="text-gray-300 text-sm md:text-base">
                     통증 개선 후에도 지속적인 관리로 재발을 철저히 예방합니다.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start">
-                <div className="bg-emerald-600 rounded-full p-3 mr-4 flex-shrink-0">
-                  <span className="text-2xl">👨‍⚕️</span>
+                <div className="bg-emerald-600 rounded-full p-2 md:p-3 mr-3 md:mr-4 flex-shrink-0">
+                  <span className="text-lg md:text-2xl">👨‍⚕️</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold mb-2">전문가 직접 지도</h3>
-                  <p className="text-gray-300">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2">전문가 직접 지도</h3>
+                  <p className="text-gray-300 text-sm md:text-base">
                     의학 석사 보유 전문가가 직접 모든 과정을 책임집니다.
                   </p>
                 </div>
@@ -377,142 +458,142 @@ export default function Home() {
       <section className="py-20 px-4 bg-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+            <h2 className="text-xl md:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
               당신에게 맞는 프로그램을 찾아드립니다
             </h2>
-            <p className="text-xl text-gray-400">
+            <p className="text-sm md:text-xl text-gray-400">
               1200명이 선택한 ITN 피트니스의 체계적인 재활 프로그램
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-3 gap-2 md:gap-8 mb-12">
             {/* 1:1 트레이닝 PT */}
-            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-2xl p-8 border border-emerald-700/50 hover:border-emerald-500 transition-all hover:shadow-2xl hover:shadow-emerald-500/20">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">1:1 트레이닝 PT</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-xl md:rounded-2xl p-2 md:p-8 border border-emerald-700/50 hover:border-emerald-500 transition-all hover:shadow-2xl hover:shadow-emerald-500/20">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center">🎯</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">1:1 PT</h3>
+              <p className="text-gray-300 mb-2 md:mb-6 leading-tight md:leading-relaxed text-[10px] md:text-base text-center hidden md:block">
                 검증된 운동 전문가들의 집중 밀착 지도
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-1 md:space-y-3 mb-2 md:mb-8 text-[10px] md:text-base hidden md:block">
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">개인별 체형 분석 및 평가</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">개인별 체형 분석</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">맞춤형 운동 프로그램</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">맞춤형 프로그램</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
                   <span className="text-gray-300">50분 세션</span>
                 </li>
               </ul>
-              <div className="text-center pt-6 border-t border-emerald-700/30">
-                <p className="text-gray-400 text-sm mb-2">상담을 통한 맞춤 견적</p>
+              <div className="text-center pt-2 md:pt-6 border-t border-emerald-700/30">
+                <p className="text-gray-400 text-[8px] md:text-sm mb-1 md:mb-2">맞춤 견적</p>
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-6"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-1 md:py-6 text-[10px] md:text-base"
                   onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  무료 상담 신청
+                  상담 신청
                 </Button>
               </div>
             </div>
 
             {/* 1:1 / 2:1 필라테스 PT */}
-            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-2xl p-8 border-2 border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-emerald-500 text-black px-6 py-2 rounded-full text-sm font-bold">
+            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-xl md:rounded-2xl p-2 md:p-8 border-2 border-emerald-500 hover:shadow-2xl hover:shadow-emerald-500/30 transition-all relative">
+              <div className="absolute -top-2 md:-top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-emerald-500 text-black px-2 md:px-6 py-0.5 md:py-2 rounded-full text-[8px] md:text-sm font-bold">
                   인기
                 </span>
               </div>
-              <div className="text-5xl mb-4">🧘</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">1:1 / 2:1 필라테스 PT</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center mt-2 md:mt-0">🧘</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">필라테스</h3>
+              <p className="text-gray-300 mb-2 md:mb-6 leading-tight md:leading-relaxed text-[10px] md:text-base text-center hidden md:block">
                 소수 정예로 진행되는 전문 필라테스 재활 프로그램
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-1 md:space-y-3 mb-2 md:mb-8 text-[10px] md:text-base hidden md:block">
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">1:1 또는 2:1 맞춤 수업</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">1:1 또는 2:1 수업</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">체형 교정 및 통증 완화</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">체형 교정</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
                   <span className="text-gray-300">50분 세션</span>
                 </li>
               </ul>
-              <div className="text-center pt-6 border-t border-emerald-700/30">
-                <p className="text-gray-400 text-sm mb-2">합리적인 가격으로 시작</p>
+              <div className="text-center pt-2 md:pt-6 border-t border-emerald-700/30">
+                <p className="text-gray-400 text-[8px] md:text-sm mb-1 md:mb-2">합리적 가격</p>
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-6"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-1 md:py-6 text-[10px] md:text-base"
                   onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  무료 상담 신청
+                  상담 신청
                 </Button>
               </div>
             </div>
 
             {/* 1:1 재활+컨디셔닝 PT */}
-            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-2xl p-8 border border-emerald-700/50 hover:border-emerald-500 transition-all hover:shadow-2xl hover:shadow-emerald-500/20">
-              <div className="text-5xl mb-4">💪</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-400">1:1 재활+컨디셔닝 PT</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                통증 부위별 정밀 분석 후 의학 석사 전문가의 1:1 맞춤 케어로 통증 개선 후 건강한 신체 능력 향상까지 원스톱 케어
+            <div className="bg-gradient-to-b from-emerald-900/20 to-gray-900/20 rounded-xl md:rounded-2xl p-2 md:p-8 border border-emerald-700/50 hover:border-emerald-500 transition-all hover:shadow-2xl hover:shadow-emerald-500/20">
+              <div className="text-xl md:text-5xl mb-1 md:mb-4 text-center">💪</div>
+              <h3 className="text-xs md:text-2xl font-bold mb-1 md:mb-4 text-emerald-400 text-center">재활PT</h3>
+              <p className="text-gray-300 mb-2 md:mb-6 leading-tight md:leading-relaxed text-[10px] md:text-base text-center hidden md:block">
+                통증 부위별 정밀 분석 후 의학 석사 전문가의 1:1 맞춤 케어
               </p>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-1 md:space-y-3 mb-2 md:mb-8 text-[10px] md:text-base hidden md:block">
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">재발 방지 운동 프로그램</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">재발 방지 프로그램</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
-                  <span className="text-gray-300">체력 및 근력 향상 훈련</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
+                  <span className="text-gray-300">근력 향상 훈련</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">✓</span>
+                  <span className="text-emerald-400 mr-1 md:mr-2">✓</span>
                   <span className="text-gray-300">50분 세션</span>
                 </li>
               </ul>
-              <div className="text-center pt-6 border-t border-emerald-700/30">
-                <p className="text-gray-400 text-sm mb-2">장기 프로그램 할인</p>
+              <div className="text-center pt-2 md:pt-6 border-t border-emerald-700/30">
+                <p className="text-gray-400 text-[8px] md:text-sm mb-1 md:mb-2">장기 할인</p>
                 <Button
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-6"
+                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-1 md:py-6 text-[10px] md:text-base"
                   onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  무료 상담 신청
+                  상담 신청
                 </Button>
               </div>
             </div>
           </div>
 
           {/* 첫 방문 혜택 강조 */}
-          <div className="bg-gradient-to-r from-emerald-900/30 to-emerald-800/30 rounded-2xl p-10 border-2 border-emerald-500 text-center">
-            <h3 className="text-3xl font-bold mb-4 text-emerald-400">🎁 첫 방문 특별 혜택</h3>
-            <div className="grid md:grid-cols-3 gap-6 mb-6">
+          <div className="bg-gradient-to-r from-emerald-900/30 to-emerald-800/30 rounded-2xl p-4 md:p-10 border-2 border-emerald-500 text-center">
+            <h3 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 text-emerald-400">🎁 첫 방문 특별 혜택</h3>
+            <div className="grid grid-cols-3 gap-2 md:gap-6 mb-4 md:mb-6">
               <div>
-                <p className="text-2xl font-bold text-white mb-2">무료 체성분 검사</p>
-                <p className="text-gray-300">정밀 전신 체형 검사 및 리포트 제공</p>
+                <p className="text-sm md:text-2xl font-bold text-white mb-1 md:mb-2">무료 체성분 검사</p>
+                <p className="text-gray-300 text-xs md:text-base">정밀 전신 체형 검사 및 리포트 제공</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-white mb-2">무료 체형 평가</p>
-                <p className="text-gray-300">전문가 1:1 상담 포함</p>
+                <p className="text-sm md:text-2xl font-bold text-white mb-1 md:mb-2">무료 체형 평가</p>
+                <p className="text-gray-300 text-xs md:text-base">전문가 1:1 상담 포함</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-white mb-2">맞춤 운동 플랜</p>
-                <p className="text-gray-300">개인별 솔루션 제안</p>
+                <p className="text-sm md:text-2xl font-bold text-white mb-1 md:mb-2">맞춤 운동 플랜</p>
+                <p className="text-gray-300 text-xs md:text-base">개인별 솔루션 제안</p>
               </div>
             </div>
-            <p className="text-emerald-300 text-lg font-semibold mb-2">
+            <p className="text-emerald-300 text-sm md:text-lg font-semibold mb-2">
               ⏰ 이번 주 신청자 한정 PT등록 시 헬스 1개월 무료증정 !
             </p>
             <p className="text-white text-sm mb-4">오늘 밤 10시 마감</p>
             <CountdownTimer />
             <Button
               size="lg"
-              className="bg-white text-emerald-900 hover:bg-gray-100 px-12 py-7 text-xl font-bold mt-6"
+              className="bg-white text-emerald-900 hover:bg-gray-100 px-6 md:px-12 py-4 md:py-7 text-sm md:text-xl font-bold mt-4 md:mt-6"
               onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
             >
               지금 바로 시작하기 →
@@ -522,18 +603,18 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+      <section className="py-12 md:py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             자주 묻는 질문
           </h2>
-          <p className="text-center text-gray-400 mb-16 text-lg">
+          <p className="text-center text-gray-400 mb-8 md:mb-16 text-sm md:text-lg">
             궁금하신 점을 빠르게 확인하세요
           </p>
 
-          <div className="space-y-4">
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+          <div className="space-y-3 md:space-y-4">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>🏃‍♂️ 처음 운동하는데 가능한가요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
@@ -544,47 +625,47 @@ export default function Home() {
               </p>
             </details>
 
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>📅 몇 개월 정도 다녀야 효과가 있나요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="mt-4 text-gray-300 leading-relaxed pl-8">
+              <p className="mt-3 md:mt-4 text-gray-300 leading-relaxed pl-4 md:pl-8 text-sm md:text-base">
                 개인차가 있지만, 대부분 <strong className="text-emerald-400">3~6개월 내 명확한 체형 변화</strong>를 경험하십니다.
                 급성 통증의 경우 2~4주 내 호전되는 경우가 많으며, 만성 통증은 3개월 이상의 꾸준한 관리가 필요합니다.
                 1200명 이상의 회원 데이터 분석 결과, 평균 3.5개월 차에 가장 높은 만족도를 보였습니다.
               </p>
             </details>
 
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>🤕 통증이 심한데도 운동할 수 있나요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="mt-4 text-gray-300 leading-relaxed pl-8">
+              <p className="mt-3 md:mt-4 text-gray-300 leading-relaxed pl-4 md:pl-8 text-sm md:text-base">
                 오히려 통증이 있을 때 <strong className="text-emerald-400">정확한 재활 운동이 더 중요</strong>합니다.
                 ITN 피트니스는 국회의원상을 수상한 재활 전문가가 통증의 근본 원인을 찾아 맞춤형 교정 운동을 제공합니다.
                 무리하지 않는 범위에서 단계적으로 진행하며, 통증이 심한 경우 초기에는 통증 완화에 집중한 후 점진적으로 운동 강도를 높입니다.
               </p>
             </details>
 
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>🚗 주차장이 있나요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="mt-4 text-gray-300 leading-relaxed pl-8">
+              <p className="mt-3 md:mt-4 text-gray-300 leading-relaxed pl-4 md:pl-8 text-sm md:text-base">
                 네, 넉넉한 주차 공간을 보유하고 있습니다. <strong className="text-emerald-400">60대 이상 주차 가능</strong>하며,
                 주차 요금은 무료입니다. 대중교통 이용 시에도 접근성이 좋은 위치에 있습니다.
               </p>
             </details>
 
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>⏰ 영업시간은 어떻게 되나요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="mt-4 text-gray-300 leading-relaxed pl-8">
+              <p className="mt-3 md:mt-4 text-gray-300 leading-relaxed pl-4 md:pl-8 text-sm md:text-base">
                 <strong className="text-emerald-400">평일 06:00 - 01:00 (익일)</strong><br/>
                 <strong className="text-emerald-400">토요일, 공휴일: 09:00 - 19:00</strong><br/>
                 <strong className="text-emerald-400">일요일: 휴관</strong><br/><br/>
@@ -592,12 +673,12 @@ export default function Home() {
               </p>
             </details>
 
-            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-emerald-500 transition-all group">
-              <summary className="cursor-pointer text-xl font-bold text-white flex justify-between items-center">
+            <details className="bg-gray-800/50 rounded-lg border border-gray-700 p-4 md:p-6 hover:border-emerald-500 transition-all group">
+              <summary className="cursor-pointer text-base md:text-xl font-bold text-white flex justify-between items-center">
                 <span>💰 가격은 어떻게 되나요?</span>
                 <span className="text-emerald-400 group-open:rotate-180 transition-transform">▼</span>
               </summary>
-              <p className="mt-4 text-gray-300 leading-relaxed pl-8">
+              <p className="mt-3 md:mt-4 text-gray-300 leading-relaxed pl-4 md:pl-8 text-sm md:text-base">
                 프로그램별, 기간별로 다양한 옵션이 있어 상담을 통해 맞춤 견적을 제공해드립니다.
                 첫 방문 시 <strong className="text-emerald-400">무료 체성분 검사 및 체형 평가</strong>를 받으실 수 있으며,
                 이번 주 신청자 한정 <strong className="text-emerald-400">PT등록 시 헬스 1개월 무료증정</strong> 혜택을 드립니다.
@@ -605,11 +686,11 @@ export default function Home() {
             </details>
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-gray-400 mb-6">더 궁금하신 점이 있으신가요?</p>
+          <div className="mt-8 md:mt-12 text-center">
+            <p className="text-gray-400 mb-4 md:mb-6 text-sm md:text-base">더 궁금하신 점이 있으신가요?</p>
             <Button
               size="lg"
-              className="bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-6 text-lg"
+              className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 md:px-10 py-4 md:py-6 text-sm md:text-lg"
               onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
             >
               1:1 상담 신청하기
@@ -621,7 +702,7 @@ export default function Home() {
       {/* 위치 및 연락처 Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             찾아오시는 길
           </h2>
 
@@ -675,7 +756,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-7 text-lg"
-                onClick={() => window.open("https://pf.kakao.com", "_blank")}
+                onClick={() => window.open("https://pf.kakao.com/_nxkQtn", "_blank")}
               >
                 💬 카카오톡으로 빠른 상담
               </Button>
@@ -687,7 +768,7 @@ export default function Home() {
       {/* Contact Form Section */}
       <section id="contact-form" className="py-20 px-4 bg-black">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             상담 신청하기
           </h2>
           <p className="text-center text-gray-300 mb-10 text-lg">
@@ -749,7 +830,7 @@ export default function Home() {
                   variant="outline"
                   size="lg"
                   className="w-full border-yellow-400 text-yellow-400 hover:bg-yellow-400/10 text-lg py-6"
-                  onClick={() => window.open("https://pf.kakao.com", "_blank")}
+                  onClick={() => window.open("https://pf.kakao.com/_nxkQtn", "_blank")}
                 >
                   💬 카카오톡으로 빠른 상담
                 </Button>
@@ -766,7 +847,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
             더 이상 통증으로 고민하지 마세요
           </h2>
           <p className="text-xl text-gray-300 mb-10">
