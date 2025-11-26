@@ -10,6 +10,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://landing-page-eight-kappa-56.vercel.app'),
 
+  // Google Search Console 인증
+  verification: {
+    google: 'ULrbCZA1O6k1gKttO1b84SmVd_rFYYgGdWa0cPbZAIg',
+  },
+
   // 기본 메타데이터
   title: {
     default: "ITN 피트니스 - 통증 없이 지속 가능한 건강 | 동해 재활 전문 피트니스",
