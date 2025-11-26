@@ -195,6 +195,8 @@ export default function RootLayout({
       <head>
         {/* Google Search Console 인증 */}
         <meta name="google-site-verification" content="ULrbCZA1O6k1gKttO1b84SmVd_rFYYgGdWa0cPbZAIg" />
+        {/* Naver Search Advisor 인증 */}
+        <meta name="naver-site-verification" content="aa6012e6abe058a43ddf8adc69707acf80b064ce" />
         {/* JSON-LD 구조화 데이터 */}
         <script
           type="application/ld+json"
