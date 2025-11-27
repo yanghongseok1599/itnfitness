@@ -36,6 +36,17 @@ export const AuroraHero = () => {
       }}
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
     >
+      {/* 배경 영상 */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-[1] opacity-40 md:w-[80%] md:h-[80%] md:top-[10%] md:left-[10%]"
+      >
+        <source src="/itnm.mp4" type="video/mp4" />
+      </video>
+
       {/* 상단 네비게이션 */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
