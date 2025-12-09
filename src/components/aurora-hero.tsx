@@ -42,7 +42,7 @@ export const AuroraHero = () => {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-[1] opacity-30"
       >
-        <source src="/itnm.mp4" type="video/mp4" />
+        <source src="https://raw.githubusercontent.com/yanghongseok1599/itnfitness/master/public/itnm.mp4" type="video/mp4" />
       </video>
 
       {/* 상단 네비게이션 */}
