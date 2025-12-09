@@ -10,6 +10,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://landing-page-eight-kappa-56.vercel.app'),
 
+  // 파비콘 설정
+  icons: {
+    icon: '/itnlogo.png',
+    shortcut: '/itnlogo.png',
+    apple: '/itnlogo.png',
+  },
+
   // Google Search Console 인증
   verification: {
     google: 'ULrbCZA1O6k1gKttO1b84SmVd_rFYYgGdWa0cPbZAIg',
