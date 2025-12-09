@@ -27,7 +27,10 @@
       "Bash(npm install:*)",
       "Bash(vercel:*)",
       "Bash(npx vercel:*)",
-      "Bash(npm update:*)"
+      "Bash(npm update:*)",
+      "Bash(ls:*)",
+      "Bash(git ls-files:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

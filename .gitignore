@@ -45,3 +45,4 @@ temp-chatbot/
 
 # large video files
 public/video.mp4
+.env*.local
