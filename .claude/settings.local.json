@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter --version:*)",
+      "Bash(where:*)",
+      "Bash(cmd.exe /c \"where flutter\")",
+      "Bash(cmd.exe /c \"flutter --version\")",
+      "Bash(powershell.exe -Command \"flutter --version\")",
+      "Bash(powershell.exe -Command \"Get-Command flutter -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Source\")",
+      "Bash(powershell.exe -Command \"Test-Path ''C:\\flutter\\bin\\flutter.bat''; Test-Path ''C:\\src\\flutter\\bin\\flutter.bat''; Test-Path ''$env:USERPROFILE\\flutter\\bin\\flutter.bat''; Get-ChildItem -Path ''C:\\'' -Filter ''flutter'' -Directory -ErrorAction SilentlyContinue | Select-Object -First 3 -ExpandProperty FullName\")",
+      "Bash(powershell.exe -Command:*)",
+      "Bash(C:/flutter/bin/flutter.bat:*)",
+      "Bash(cat:*)",
+      "Bash(python:*)",
+      "Bash(node:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git restore:*)",
+      "Bash(cmd.exe /c \"for /f \"\"tokens=5\"\" %a in (''netstat -aon ^| findstr :3003 ^| findstr LISTENING'') do taskkill /F /PID %a\")",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd.exe /c \"taskkill /F /PID 71772\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

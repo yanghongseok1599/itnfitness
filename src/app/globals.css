@@ -4,26 +4,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 0 0% 4%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 5%;
+    --card: 0 0% 6%;
     --card-foreground: 0 0% 100%;
-    --popover: 0 0% 5%;
+    --popover: 0 0% 6%;
     --popover-foreground: 0 0% 100%;
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 14.9%;
+    --primary: 43 45% 59%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
+    --muted: 0 0% 12%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 45% 59%;
+    --accent-foreground: 0 0% 4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 262 83% 58%;
-    --radius: 0.5rem
+    --border: 0 0% 18%;
+    --input: 0 0% 12%;
+    --ring: 43 45% 59%;
+    --radius: 0.5rem;
+
+    /* Custom Colors - Light Mode */
+    --color-bg: #ffffff;
+    --color-bg-secondary: #f8f8f8;
+    --color-text: #1a1a1a;
+    --color-text-muted: #666666;
+    --color-accent: #c9a962;
+    --color-accent-light: #d4b87a;
+    --color-accent-dark: #a88a4a;
+    --color-border: #e5e5e5;
   }
 }
 
@@ -33,5 +43,359 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color: #ffffff;
   }
+
+  /* 한글 자동 줄바꿈 - 단어 단위로 끊기 */
+  h1, h2, h3, h4, h5, h6, p, span, a, li, label, summary {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+}
+
+/* ================================
+   ANIMATIONS
+   ================================ */
+
+/* 1. Marquee - Infinite scrolling text */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* 2. Scroll Fade Up Animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in from left */
+.animate-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade in from right */
+.animate-on-scroll-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale up animation */
+.animate-on-scroll-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mobile optimized animations - faster and smaller movement */
+@media (max-width: 768px) {
+  .animate-on-scroll {
+    transform: translateY(50px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-on-scroll-left {
+    transform: translateX(-40px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-on-scroll-right {
+    transform: translateX(40px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-on-scroll-scale {
+    transform: scale(0.9);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* Staggered animations for children */
+.animate-on-scroll.visible .stagger-1 { transition-delay: 0.1s; }
+.animate-on-scroll.visible .stagger-2 { transition-delay: 0.2s; }
+.animate-on-scroll.visible .stagger-3 { transition-delay: 0.3s; }
+.animate-on-scroll.visible .stagger-4 { transition-delay: 0.4s; }
+
+/* Delay variations */
+.animate-delay-100 { transition-delay: 0.1s; }
+.animate-delay-200 { transition-delay: 0.2s; }
+.animate-delay-300 { transition-delay: 0.3s; }
+.animate-delay-400 { transition-delay: 0.4s; }
+.animate-delay-500 { transition-delay: 0.5s; }
+
+/* 3. Card Hover Effect */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 20px 40px rgba(201, 169, 98, 0.15);
+}
+
+/* 4. Shimmer Text Effect */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    #c9a962 25%,
+    #1a1a1a 50%,
+    #c9a962 75%,
+    #1a1a1a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* 5. Fixed CTA Button */
+.cta-fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-fixed.visible {
+  transform: translateY(0);
+}
+
+/* 6. Glow Effect */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(201, 169, 98, 0.3),
+                0 0 40px rgba(201, 169, 98, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(201, 169, 98, 0.5),
+                0 0 60px rgba(201, 169, 98, 0.2);
+  }
+}
+
+.glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* 7. Pulse Effect for CTA */
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 169, 98, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(201, 169, 98, 0);
+  }
+}
+
+.pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* 8. Fade In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* 9. Slide Up Animation */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* 10. Border Gradient Animation */
+@keyframes borderGlow {
+  0%, 100% { border-color: rgba(201, 169, 98, 0.3); }
+  50% { border-color: rgba(201, 169, 98, 0.8); }
+}
+
+.border-glow {
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+/* ================================
+   CUSTOM UTILITY CLASSES
+   ================================ */
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c9a962 0%, #e8d5a3 50%, #c9a962 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Light gold gradient - brighter for hero emphasis */
+.text-gold-gradient-light {
+  background: linear-gradient(135deg, #d4b87a 0%, #f0e4c4 30%, #e8d5a3 50%, #f0e4c4 70%, #d4b87a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Soft gold gradient - subtle for subtitles */
+.text-gold-gradient-soft {
+  background: linear-gradient(90deg, #b89a52 0%, #d4b87a 25%, #c9a962 50%, #d4b87a 75%, #b89a52 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gold border */
+.border-gold {
+  border-color: var(--color-accent);
+}
+
+/* Gold background */
+.bg-gold {
+  background-color: var(--color-accent);
+}
+
+/* Gold text */
+.text-gold {
+  color: var(--color-accent);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-light);
+}
+
+/* Modal animations */
+@keyframes scale-in {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-once {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+.animate-bounce-once {
+  animation: bounce-once 0.6s ease-in-out;
+}
+
+/* Line decoration */
+.line-decoration::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), transparent);
+  margin-top: 1rem;
+}
+
+.line-decoration-center::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  margin: 1rem auto 0;
 }

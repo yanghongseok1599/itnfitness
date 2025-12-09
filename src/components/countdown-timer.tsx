@@ -51,18 +51,18 @@ export default function CountdownTimer() {
   return (
     <div className="flex items-center justify-center gap-3 mt-4">
       <div className="flex items-center gap-1">
-        <div className="bg-white text-emerald-600 font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center">
+        <div className="bg-gray-100 text-[#c9a962] font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center shadow-sm">
           {formatNumber(timeLeft.hours)}
         </div>
-        <span className="text-white font-bold text-xl">:</span>
+        <span className="text-[#c9a962] font-bold text-xl">:</span>
       </div>
       <div className="flex items-center gap-1">
-        <div className="bg-white text-emerald-600 font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center">
+        <div className="bg-gray-100 text-[#c9a962] font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center shadow-sm">
           {formatNumber(timeLeft.minutes)}
         </div>
-        <span className="text-white font-bold text-xl">:</span>
+        <span className="text-[#c9a962] font-bold text-xl">:</span>
       </div>
-      <div className="bg-white text-emerald-600 font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center">
+      <div className="bg-gray-100 text-[#c9a962] font-bold text-2xl px-4 py-3 rounded-lg min-w-[60px] text-center shadow-sm">
         {formatNumber(timeLeft.seconds)}
       </div>
     </div>

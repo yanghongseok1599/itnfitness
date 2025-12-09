@@ -100,7 +100,7 @@ export default function AIChatbot() {
       >
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="h-14 w-14 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all"
+          className="h-14 w-14 rounded-full bg-[#c9a962] hover:bg-[#d4b87a] shadow-lg hover:shadow-xl transition-all"
           size="icon"
         >
           {isOpen ? (
@@ -122,7 +122,7 @@ export default function AIChatbot() {
             className="fixed bottom-24 right-6 z-50 w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden"
           >
             {/* 헤더 */}
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
+            <div className="bg-[#c9a962] p-4 text-white">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
@@ -148,7 +148,7 @@ export default function AIChatbot() {
                   <div
                     className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                       message.role === "user"
-                        ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                        ? "bg-[#c9a962] text-white"
                         : "bg-white text-gray-800 shadow-sm border border-gray-100"
                     }`}
                   >
@@ -193,13 +193,13 @@ export default function AIChatbot() {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="메시지를 입력하세요..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#c9a962] focus:border-transparent text-black"
                   disabled={isLoading}
                 />
                 <Button
                   onClick={sendMessage}
                   disabled={!input.trim() || isLoading}
-                  className="rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="rounded-full bg-[#c9a962] hover:bg-[#d4b87a]"
                   size="icon"
                 >
                   <Send className="h-4 w-4" />
