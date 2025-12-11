@@ -5,11 +5,15 @@ interface NaverMapProps {
 }
 
 export default function NaverMap({ className }: NaverMapProps) {
+  // ITN 피트니스 주소: 강원도 동해시 효자남길 33-34
+  const address = "강원도 동해시 효자남길 33-34";
+  const encodedAddress = encodeURIComponent(address);
+
   return (
     <div className={`${className} relative`}>
-      {/* 네이버 지도 iframe */}
+      {/* 구글 지도 iframe */}
       <iframe
-        src="https://map.naver.com/p/entry/place/38339173?c=15,0,0,0,dh"
+        src={`https://www.google.com/maps?q=${encodedAddress}&output=embed&z=17`}
         className="w-full h-full border-0"
         allowFullScreen
         loading="lazy"
@@ -18,7 +22,7 @@ export default function NaverMap({ className }: NaverMapProps) {
 
       {/* 하단 오버레이 - 클릭 유도 */}
       <a
-        href="https://naver.me/Fr7zuIIp"
+        href={`https://www.google.com/maps/search/?api=1&query=${encodedAddress}`}
         target="_blank"
         rel="noopener noreferrer"
         className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 flex items-center justify-between hover:from-black/80 transition-all"
