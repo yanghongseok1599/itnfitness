@@ -40,7 +40,7 @@ export const AuroraHero = () => {
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-[1] opacity-20"
+        className="absolute inset-0 w-full h-full object-cover z-[1] opacity-40"
       >
         <source src="https://raw.githubusercontent.com/yanghongseok1599/itnfitness/master/public/itnm.mp4" type="video/mp4" />
       </video>
